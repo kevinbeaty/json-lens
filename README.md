@@ -17,6 +17,7 @@ var market = {
 We can create lenses using JSON pointers.
 
 ```javascript
+var lens = require('json-lens');
 var firstFruit = lens('/foods/fruits/0');
 var secondVeggie = lens('/foods/veggies/1');
 ```
@@ -64,7 +65,7 @@ t.deepEqual(market, result);
 ```
 
 ### Credits
-Pointer get/set code modified from [JSON Pointer][1] and lens implementation from [Ramda][2].  Both projects are licensed under MIT.
+Pointer get/set code modified from [json-pointer][1] and lens implementation from [Ramda][2].  Both projects are licensed under MIT.
 
 [0]: http://tools.ietf.org/html/rfc6901
 [1]: https://github.com/manuelstofer/json-pointer
