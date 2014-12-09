@@ -9,7 +9,7 @@ function jsonLens(pointer){
   var tokens = parse(pointer),
       get = tokenGet(tokens),
       set = tokenSet(tokens),
-      lns = function(obj) { return get(obj); };
+      lns = get;
   lns.set = set;
   lns.map = function(fn, obj) { return set(fn(get(obj)), obj); };
   return lns;
